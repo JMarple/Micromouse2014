@@ -59,5 +59,5 @@ int getNeighborDistance(int x, int y, int direction) {
 }
 
 int getDistance(int x, int y) {
-    return cells[x - 1][y - 1];
+    return cells[x - 1][y - 1].;
 }
