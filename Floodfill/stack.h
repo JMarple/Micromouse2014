@@ -16,6 +16,6 @@ void push(int value, struct llstack *stack);
 
 
 int top(struct llstack *stack);
-
+int stackIsEmpty(struct llstack *stack);
 void init_stack(struct llstack *stack);
 
