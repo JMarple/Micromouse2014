@@ -50,7 +50,7 @@ int top(struct llstack *stack)
      {return null;}
 }
 
-int init_stack(struct llstack *stack)
+void init_stack(struct llstack *stack)
 {
 	stack->top = NULL;
 }
