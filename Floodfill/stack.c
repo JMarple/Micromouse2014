@@ -8,18 +8,20 @@ struct Node
 }
 
 struct llstack{
-struct Node *top}
+struct Node *top} llstack;
 
 void popStack(struct llstack *stack)
 {
     struct Node *var=stack->top;
-    if(var==stack->top)
+    if(var->next!=NULL)
     {
         stack->top = stack->top->next;
         free(var);
     }
-    else
-    printf("\nStack Empty");
+    else (var!=NULL&&var->next==NULL){
+    	top=NULL;
+    }
+	
 }
 
 void push(int value, struct llstack *stack)
@@ -45,9 +47,9 @@ int top(struct llstack *stack)
      struct Node *var=stack->top;
      if(var!=NULL)
       return var->Data;
-     }
      else
-     {return null;}
+      return -1;
+
 }
 
 void init_stack(struct llstack *stack)
