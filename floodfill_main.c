@@ -57,16 +57,7 @@ void initialize_maze(){
 		}
 }
 
- void setDestination(char a){
-	if(a=='C'){
-		setValue(cell[MAZEHEIGHT/2][MAZEWIDTH/2],0);
-		setValue(cell[MAZEHEIGHT/2+1][MAZEWIDTH/2],0);
-		setValue(cell[MAZEHEIGHT/2][MAZEWIDTH/2+1],0);
-		setValue(cell[MAZEHEIGHT/2+1][MAZEWIDTH/2+1],0);
-	}
-	else 
-		setValue(cell[0][MAZEHEIGHT]);
-}
+
 
 int main(void)
 {	initialize_maze();
@@ -84,7 +75,8 @@ int main(void)
 	setDestination(Destination)
 	while(getValue(currCell)!=0){
 	check_walls_update();
-	floodfill();
+	floodfill(cells,'C');
+	}
 	
 	
 	
