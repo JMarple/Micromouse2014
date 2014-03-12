@@ -52,6 +52,12 @@ int top(struct llstack *stack)
 
 }
 
+int stackIsEmpty(struct llstack *stack){
+	if (stack->top==NULL)
+	return 1;
+	else 
+	return 0;
+}
 void init_stack(struct llstack *stack)
 {
 	stack->top = NULL;
