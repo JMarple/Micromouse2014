@@ -75,7 +75,7 @@ TARGET = main
 
 # Object files directory
 #     To put object files in current directory, use a dot (.), do NOT make
-#     this an empty or blank macro!
+#     this an empty or blank macro! 
 OBJDIR = .
 
 
@@ -86,6 +86,7 @@ SRC += RobotModel/RobotModel_controls.c
 SRC += RobotModel/RobotModel_StepperMotor.c
 SRC += RobotModel/RobotModel_Sensors.c
 SRC += USART.c
+SRC += Floodfill/stack.c
 
 # List C++ source files here. (C dependencies are automatically generated.)
 CPPSRC = 

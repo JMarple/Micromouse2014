@@ -29,7 +29,7 @@ Last Updated: March 1st 2014
 #include "RobotModel/RobotModel_Controls.h"
 #include "RobotModel/RobotModel_StepperMotor.h"
 #include "RobotModel/RobotModel_Sensors.h"
-
+#include "Floodfill/stack.h"
 //Debugging
 #include "USART.h"
 

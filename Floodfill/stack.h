@@ -5,10 +5,10 @@ struct Node
 {
     int Data;
     struct Node *next;
-}
+}Node;
 
 struct llstack{
-struct Node *top}
+struct Node *top;}llstack;
 
 void popStack(struct llstack *stack);
 
