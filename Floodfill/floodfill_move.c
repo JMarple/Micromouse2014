@@ -1,4 +1,5 @@
 #include "RobotModel/RobotModel.h"
+#include "DataComponents.h"
 
 #define FORWARD 0
 #define REVERSE 1
@@ -16,24 +17,23 @@ int determineNextMove() {
         bestDirection = mouse.direction;
         bestDistance = getNeighborDistance(mouse.x, mouse.y, bestDirection);
     }
-
     if ((bestDistance > getNeighborDistance(mouse.x, mouse.y, NORTH)) &&
-            (getWall(mouse.direction, NORTH) == 0)) {
+            (getN() == 0)) {
         bestDirection = NORTH;
         bestDistance = getNeighborDistance(mouse.x, mouse.y, bestDirection);
     }
     if ((bestDistance > getNeighborDistance(mouse.x, mouse.y, EAST)) &&
-            (getWall(mouse.direction, EAST) == 0)) {
+            (getE() == 0)) {
         bestDirection = EAST;
         bestDistance = getNeighborDistance(mouse.x, mouse.y, bestDirection);
     }
     if ((bestDistance > getNeighborDistance(mouse.x, mouse.y, WEST)) &&
-            (getWall(mouse.direction, WEST) == 0)) {
+            (getW() == 0)) {
         bestDirection = WEST;
         bestDistance = getNeighborDistance(mouse.x, mouse.y, bestDirection);
     }
     if ((bestDistance > getNeighborDistance(mouse.x, mouse.y, SOUTH)) &&
-            (getWall(mouse.direction, SOUTH) == 0)) {
+            (getS() == 0)) {
         bestDirection = SOUTH;
         bestDistance = getNeighborDistance(mouse.x, mouse.y, bestDirection);
     }
